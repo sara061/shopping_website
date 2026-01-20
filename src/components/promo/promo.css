@@ -63,11 +63,28 @@
 
 .highlight {
     position: relative;
+    display: inline-block;
 }
 
+.highlight span {
+    position: relative;
+    z-index: 1;
+}
 .highlight::before {
     content: "";
     display: block;
     position: absolute;
 
+    border: 1px solid #000;
+    transform: rotate(-2deg);
+    top: -12px;
+    bottom: 0;
+    left: -40px;
+    right: -160px;
+    background-color: white;
+}
+
+.highlight--yellow::before {
+    background-color: var(--yellow);
+    right: -117px;
 }
